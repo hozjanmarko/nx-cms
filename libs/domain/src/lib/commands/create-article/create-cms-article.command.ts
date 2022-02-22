@@ -1,5 +1,9 @@
-import { IsID, IsRequiredString, validateModel } from '@nx-cms/common';
-import { IsOptional } from 'class-validator';
+import {
+  IsID,
+  IsRequiredString,
+  validateModel,
+} from '@nx-cms/common/validation';
+import { IsBoolean, IsOptional } from 'class-validator';
 import { CreateCmsArticleCommandProps } from './create-cms-article-comman.props';
 
 export class CreateCmsArticleCommand implements CreateCmsArticleCommandProps {
@@ -8,6 +12,7 @@ export class CreateCmsArticleCommand implements CreateCmsArticleCommandProps {
   @IsRequiredString()
   public readonly content: string;
   @IsOptional()
+  @IsBoolean()
   public readonly published?: boolean;
   @IsID()
   public readonly accountId: string;

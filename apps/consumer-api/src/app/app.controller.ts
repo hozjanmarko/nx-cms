@@ -1,13 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
+import { CreateArticleDto } from './models/article/create-article.dto';
+import { CmsConsumerService } from './services/cms-consumer-service';
 
-import { AppService } from './app.service';
-
-@Controller()
+@Controller('/article')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly cmsConsumerService: CmsConsumerService) {}
 
-  @Get()
-  getData() {
-    return this.appService.getData();
+  @Post()
+  createArticle(@Body() createArticleDto: CreateArticleDto) {
+    return this.cmsConsumerService.createArticle(createArticleDto);
   }
 }

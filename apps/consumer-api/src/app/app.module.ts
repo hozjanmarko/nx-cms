@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
+import { DomainModule } from '@nx-cms/domain';
 
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { CmsConsumerService } from './services/cms-consumer-service';
 
 @Module({
-  imports: [],
+  imports: [DomainModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [CmsConsumerService],
 })
 export class AppModule {}
