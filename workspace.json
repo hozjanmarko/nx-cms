@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "cms-admin": "apps/cms-admin",
+    "cms-admin-e2e": "apps/cms-admin-e2e",
+    "cms-consumer": "apps/cms-consumer",
+    "cms-consumer-e2e": "apps/cms-consumer-e2e",
     "consumer-api": "apps/consumer-api",
     "domain": "libs/domain"
   }
