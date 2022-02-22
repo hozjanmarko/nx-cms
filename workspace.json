@@ -6,6 +6,7 @@
     "cms-consumer": "apps/cms-consumer",
     "cms-consumer-e2e": "apps/cms-consumer-e2e",
     "consumer-api": "apps/consumer-api",
-    "domain": "libs/domain"
+    "domain": "libs/domain",
+    "ui": "libs/ui"
   }
 }

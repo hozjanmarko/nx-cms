@@ -1,13 +1,14 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import {Reset} from "styled-reset";
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function CmsConsumer({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>Welcome to cms-consumer!</title>
       </Head>
+      <Reset />
       <main className="app">
         <Component {...pageProps} />
       </main>
@@ -15,4 +16,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default CmsConsumer;

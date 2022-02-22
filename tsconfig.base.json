@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-cms/domain": ["libs/domain/src/index.ts"]
+      "@nx-cms/domain": ["libs/domain/src/index.ts"],
+      "@nx-cms/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
