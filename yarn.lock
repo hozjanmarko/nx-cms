@@ -9856,6 +9856,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-quicksand@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-quicksand/-/typeface-quicksand-1.1.13.tgz#c408be6f5e09fda5379d74fe44c47938436c321b"
+  integrity sha512-sStzisPEpHfgPDE7EQvaDj9j5kxF56xeJgVc/8F2cchmI1IeuQ5ZE3ufTchSSpKbGRddgjgfWGUyjb7RqtJORA==
+
 typescript@^4.5.3, typescript@~4.5.2:
   version "4.5.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"

@@ -17,7 +17,8 @@
     "paths": {
       "@nx-cms/domain": ["libs/domain/src/index.ts"],
       "@nx-cms/shared/ui/components": ["libs/shared/ui/src/components/index.tsx"],
-      "@nx-cms/shared/ui/utils": ["libs/shared/ui/src/utils/index.tsx"]
+      "@nx-cms/shared/ui/utils": ["libs/shared/ui/src/utils/index.tsx"],
+      "@nx-cms/shared/ui/global": ["libs/shared/ui/src/global/index.tsx"]
     }
   },
   "exclude": ["node_modules", "tmp"]
