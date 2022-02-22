@@ -15,22 +15,12 @@
         "main": "apps/cms-admin/src/main.tsx",
         "polyfills": "apps/cms-admin/src/polyfills.ts",
         "tsConfig": "apps/cms-admin/tsconfig.app.json",
-        "assets": [
-          "apps/cms-admin/src/favicon.ico",
-          "apps/cms-admin/src/assets"
-        ],
         "styles": [],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
       "configurations": {
         "production": {
-          "fileReplacements": [
-            {
-              "replace": "apps/cms-admin/src/environments/environment.ts",
-              "with": "apps/cms-admin/src/environments/environment.prod.ts"
-            }
-          ],
           "optimization": true,
           "outputHashing": "all",
           "sourceMap": false,

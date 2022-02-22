@@ -1,6 +1,6 @@
 import {Button} from "@nx-cms/shared/ui/components";
 
-export function CmsAdmin() {
+export function App() {
   return (
     <div>
       <Button />
@@ -9,4 +9,4 @@ export function CmsAdmin() {
   );
 }
 
-export default CmsAdmin;
+export default App;
