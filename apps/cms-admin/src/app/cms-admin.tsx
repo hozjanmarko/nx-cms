@@ -1,9 +1,9 @@
-import {Button} from '@nx-cms/ui'
+import { Button } from '@nx-cms/shared/ui';
 
 export function CmsAdmin() {
   return (
     <div>
-      <Button/>
+      <Button />
     </div>
   );
 }

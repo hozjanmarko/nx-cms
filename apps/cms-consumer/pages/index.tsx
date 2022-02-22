@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Button} from "@nx-cms/ui";
+import {Button} from "@nx-cms/shared/ui/buttons";
 
 const StyledPage = styled.div`
   .page {
@@ -14,7 +14,7 @@ export function Index() {
    */
   return (
     <StyledPage>
-      <Button/>
+      <Button />
     </StyledPage>
   );
 }
