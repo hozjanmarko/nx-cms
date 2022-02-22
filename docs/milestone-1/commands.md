@@ -16,3 +16,9 @@ nx g @nrwl/nest:lib domain
 #CONSUMER API API
 nx g @nrwl/nest:app consumer-api
 ```
+
+```bash
+#Common library
+nx g @nrwl/workspace:lib validation --directory=common
+nx g @nrwl/workspace:lib validation --directory=utils
+```

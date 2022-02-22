@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "common-exceptions": "libs/common/exceptions",
+    "common-utils": "libs/common/utils",
+    "common-validation": "libs/common/validation",
     "consumer-api": "apps/consumer-api",
     "domain": "libs/domain"
   }
