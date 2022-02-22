@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Button} from "@nx-cms/shared/ui/buttons";
+import {Button} from "@nx-cms/shared/ui/components";
 
 const StyledPage = styled.div`
   .page {

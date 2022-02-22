@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-cms/domain": ["libs/domain/src/index.ts"],
-      "@nx-cms/shared/ui/buttons": ["libs/shared/ui/src/buttons/index.tsx"]
+      "@nx-cms/shared/ui/components": ["libs/shared/ui/src/components/index.tsx"],
+      "@nx-cms/shared/ui/utils": ["libs/shared/ui/src/utils/index.tsx"]
     }
   },
   "exclude": ["node_modules", "tmp"]

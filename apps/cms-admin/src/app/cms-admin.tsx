@@ -1,4 +1,4 @@
-import { Button } from '@nx-cms/shared/ui';
+import {Button} from "@nx-cms/shared/ui/components";
 
 export function CmsAdmin() {
   return (
