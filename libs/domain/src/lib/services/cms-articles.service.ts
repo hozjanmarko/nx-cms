@@ -1,4 +1,4 @@
-import { Injectable, NotImplementedException } from '@nestjs/common';
+import { Inject, Injectable, NotImplementedException } from '@nestjs/common';
 import { CreateCmsArticleCommand } from '../commands/create-article/create-cms-article.command';
 import { CmsArticle } from '../models/article/cms-article.model';
 import { CmsArticleRepositoryPort } from '../ports/cms-article-repository.port';
@@ -6,6 +6,7 @@ import { CmsArticleRepositoryPort } from '../ports/cms-article-repository.port';
 @Injectable()
 export class CmsArticleService {
   constructor(
+    @Inject(CmsArticleRepositoryPort)
     private readonly cmsArticleRepository: CmsArticleRepositoryPort
   ) {}
   public async getPublishedArticles(): Promise<

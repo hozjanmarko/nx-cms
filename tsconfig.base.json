@@ -18,7 +18,10 @@
       "@nx-cms/common/exceptions": ["libs/common/exceptions/src/index.ts"],
       "@nx-cms/common/utils": ["libs/common/utils/src/index.ts"],
       "@nx-cms/common/validation": ["libs/common/validation/src/index.ts"],
-      "@nx-cms/domain": ["libs/domain/src/index.ts"]
+      "@nx-cms/domain": ["libs/domain/src/index.ts"],
+      "@nx-cms/infrastructure/cms-data-access": [
+        "libs/infrastructure/cms-data-access/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
