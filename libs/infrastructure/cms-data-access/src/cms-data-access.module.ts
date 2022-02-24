@@ -1,10 +1,11 @@
-import { DynamicModule, Module } from '@nestjs/common';
+import { DynamicModule } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { CmsArticleRepositoryPort } from '@nx-cms/domain';
-import { CmsArticlesRepositoryAdapter, CmsDataAccessModuleOptions } from '.';
+import { CmsDataAccessModuleOptions } from '.';
 import { CmsArticleEntity } from './models/entities/cms-article.entity';
+import { CmsArticlesRepositoryAdapter } from './services/cms-articles-repository.adapter';
 
-@Module({})
 export class CmsDataAccessModule {
   public static registerAsync(
     options: CmsDataAccessModuleOptions
@@ -34,6 +35,7 @@ export class CmsDataAccessModule {
         },
       ],
       exports: [CmsArticleRepositoryPort],
+      global: true,
     };
   }
 }

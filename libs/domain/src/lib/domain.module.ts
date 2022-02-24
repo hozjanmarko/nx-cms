@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-import { CmsDataAccessModule } from '@nx-cms/infrastructure/cms-data-access';
 import { CmsArticleService } from './services/cms-articles.service';
 
 @Module({
-  imports: [CmsDataAccessModule],
+  imports: [],
   providers: [CmsArticleService],
   exports: [CmsArticleService],
 })

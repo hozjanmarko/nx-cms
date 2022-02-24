@@ -19,6 +19,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "slugify": "^1.6.5",
+    "swagger-ui-express": "^4.3.0",
     "tslib": "^2.0.0",
     "typeorm": "^0.2.43",
     "uuid": "^8.3.2"

@@ -1,10 +1,11 @@
 import {
   IsID,
   IsOptionalDate,
+  IsOptionalString,
   IsRequiredString,
   validateModel,
 } from '@nx-cms/common/validation';
-import { slugify } from '@nx-cms/common/utils';
+import { makeUUID, slugify } from '@nx-cms/common/utils';
 import { IsBoolean, IsDate } from 'class-validator';
 
 import { CmsArticleProps } from './cms-article.props';
@@ -16,8 +17,8 @@ export class CmsArticle {
   public readonly title: string;
   @IsRequiredString()
   public readonly slug: string;
-  @IsRequiredString()
-  public readonly content: string;
+  @IsOptionalString()
+  public readonly content?: string;
   @IsDate()
   public readonly createdAt: Date;
   @IsOptionalDate()
@@ -42,7 +43,7 @@ export class CmsArticle {
       updatedAt,
     } = props;
 
-    this.id = id || makeUuid();
+    this.id = id || makeUUID();
     this.title = title;
     this.content = content;
     this.accountId = accountId;
@@ -55,7 +56,4 @@ export class CmsArticle {
 
     validateModel(this);
   }
-}
-function makeUuid(): string {
-  throw new Error('Function not implemented.');
 }

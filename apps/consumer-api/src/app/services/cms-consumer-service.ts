@@ -1,8 +1,10 @@
+import { Injectable } from '@nestjs/common';
 import { CmsArticleService, CreateCmsArticleCommand } from '@nx-cms/domain';
 import { mapCmsArticle } from '../mappings/article/map-cms-atricle';
 import { ArticleDto } from '../models/article/article.dto';
 import { CreateArticleDto } from '../models/article/create-article.dto';
 
+@Injectable()
 export class CmsConsumerService {
   constructor(private readonly cmsArticleService: CmsArticleService) {}
 

@@ -10,9 +10,9 @@ import { validateSync } from 'class-validator';
 export const validateModel = (obj: any, detail?: string): void => {
   const validationErrors = validateSync(obj, { forbidNonWhitelisted: true });
   if (validationErrors.length) {
-    throw new ValidationException(
-      detail || `Invalid ${obj?.constructor?.name || typeof obj} invariant`,
-      detail
+    throw ValidationException.fromValidationErrors(
+      validationErrors,
+      detail || `Invalid ${obj?.constructor?.name || typeof obj} invariant`
     );
   }
 };
