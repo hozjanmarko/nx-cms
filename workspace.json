@@ -5,6 +5,7 @@
     "common-utils": "libs/common/utils",
     "common-validation": "libs/common/validation",
     "consumer-api": "apps/consumer-api",
-    "domain": "libs/domain"
+    "domain": "libs/domain",
+    "infrastructure-cms-data-access": "libs/infrastructure/cms-data-access"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "root": "libs/infrastructure/cms-data-access",
+  "sourceRoot": "libs/infrastructure/cms-data-access/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/infrastructure/cms-data-access/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/infrastructure/cms-data-access"],
+      "options": {
+        "jestConfig": "libs/infrastructure/cms-data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "migration:generate": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.lib.json -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js -f ormconfig.js migration:generate -n {args.name}",
+        "cwd": "libs/infrastructure/cms-data-access",
+        "envFile": "apps/consumer-api/.env.local"
+      }
+    },
+    "migration:run": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.lib.json -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js -f ormconfig.js migration:run",
+        "cwd": "libs/infrastructure/cms-data-access",
+        "envFile": "apps/consumer-api/.env.local"
+      }
+    },
+    "migration:revert": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.lib.json -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js -f ormconfig.js migration:revert",
+        "cwd": "libs/infrastructure/cms-data-access",
+        "envFile": "apps/consumer-api/.env.local"
+      }
+    }
+  },
+  "tags": []
+}
