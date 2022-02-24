@@ -7,7 +7,7 @@ import { validateSync } from 'class-validator';
  *   @property: detail - custom message to display when there is an error
  *   @throws: ValidationException
  */
-export const validateModel = (obj: any, detail?: string): void => {
+export const validateModel = (obj: object, detail?: string): void => {
   const validationErrors = validateSync(obj, { forbidNonWhitelisted: true });
   if (validationErrors.length) {
     throw ValidationException.fromValidationErrors(

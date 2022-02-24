@@ -15,4 +15,12 @@ nx migration:generate infrastructure-cms-data-access --name={NameOfTheMigration}
 
 #Apply a migration
 nx migration:run infrastructure-cms-data-access
+
+#revert a migration
+nx migration:revert infrastructure-cms-data-access
 ```
+
+## Implementation Downsides
+
+- global dal module, would need to dive a little bit more into dynamic modules
+- be ap is using webpack, for now we are providing the entities and migrations directly in the typeorm module initialization

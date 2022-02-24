@@ -5,6 +5,7 @@ import { CmsArticleRepositoryPort } from '@nx-cms/domain';
 import { CmsDataAccessModuleOptions } from '.';
 import { CmsArticleEntity } from './models/entities/cms-article.entity';
 import { CmsArticlesRepositoryAdapter } from './services/cms-articles-repository.adapter';
+import { initial1645603047094 } from './migrations/1645603047094-initial';
 
 export class CmsDataAccessModule {
   public static registerAsync(
@@ -24,6 +25,8 @@ export class CmsDataAccessModule {
               password: connectionOptions.password,
               ssl: !!connectionOptions.ssl,
               entities: [CmsArticleEntity],
+              migrations: [initial1645603047094],
+              migrationsRun: connectionOptions.runMigrations,
             };
           },
         }),

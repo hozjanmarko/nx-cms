@@ -17,6 +17,7 @@ import { CmsConsumerService } from './services/cms-consumer-service';
             ? parseInt(process.env?.TYPEORM_PORT, 10)
             : null,
           runMigrations: process.env?.TYPEORM_RUN_MIGRATIONS === 'true',
+          ssl: process.env?.TYPEORM_SSL === 'true',
         };
       },
     }),

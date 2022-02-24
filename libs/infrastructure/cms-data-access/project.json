@@ -35,6 +35,15 @@
         "cwd": "libs/infrastructure/cms-data-access",
         "envFile": "apps/consumer-api/.env.local"
       }
+    },
+    "migration:revert": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "ts-node --project tsconfig.lib.json -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js -f ormconfig.js migration:revert",
+        "cwd": "libs/infrastructure/cms-data-access",
+        "envFile": "apps/consumer-api/.env.local"
+      }
     }
   },
   "tags": []
