@@ -1,4 +1,4 @@
-import { DynamicModule, Inject, Module } from '@nestjs/common';
+import { DynamicModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CmsArticleRepositoryPort } from '@nx-cms/domain';
 import { CmsArticlesRepositoryAdapter, CmsDataAccessModuleOptions } from '.';
@@ -13,12 +13,8 @@ export class CmsDataAccessModule {
       module: CmsDataAccessModule,
       imports: [
         TypeOrmModule.forRootAsync({
-          inject: [CmsDataAccessModuleOptions],
-          useFactory: async (
-            cmsDataAccessModuleOptions: CmsDataAccessModuleOptions
-          ) => {
-            const connectionOptions =
-              await cmsDataAccessModuleOptions.useFactory();
+          useFactory: async () => {
+            const connectionOptions = await options.useFactory();
             return {
               type: 'postgres',
               port: connectionOptions.port,
@@ -32,10 +28,6 @@ export class CmsDataAccessModule {
         }),
       ],
       providers: [
-        {
-          provide: CmsDataAccessModuleOptions,
-          useValue: options,
-        },
         {
           provide: CmsArticleRepositoryPort,
           useClass: CmsArticlesRepositoryAdapter,
